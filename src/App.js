@@ -6,7 +6,9 @@ import Header from "./components/header/header";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import { auth, createUserProfileDocument } from "./firebase/firebase";
 import { connect } from "react-redux";
-import { setCurrentUser } from "./redux/user/user-actions";
+import setCurrentUser from "./redux/user/user-actions";
+
+
 import "./App.css";
 class App extends React.Component {
   unsubscribeFromAuth = null;
