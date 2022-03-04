@@ -15,24 +15,16 @@ import {
   TestWarningContainer,
 } from "./checkout.styles";
 
+const HEADER_BLOCKS_TITLES = ["Product", "Description", "Quantity", "Price", "Remove"];
+
 export const CheckoutPage = ({ cartItems, total }) => (
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
-      <HeaderBlockContainer>
-        <span>Product</span>
-      </HeaderBlockContainer>
-      <HeaderBlockContainer>
-        <span>Description</span>
-      </HeaderBlockContainer>
-      <HeaderBlockContainer>
-        <span>Quantity</span>
-      </HeaderBlockContainer>
-      <HeaderBlockContainer>
-        <span>Price</span>
-      </HeaderBlockContainer>
-      <HeaderBlockContainer>
-        <span>Remove</span>
-      </HeaderBlockContainer>
+      {HEADER_BLOCKS_TITLES.map((title, index) => (
+        <HeaderBlockContainer key={index}>
+          <span>{title}</span>
+        </HeaderBlockContainer>
+      ))}
     </CheckoutHeaderContainer>
     {cartItems.map((cartItem) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
