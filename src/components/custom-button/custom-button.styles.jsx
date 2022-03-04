@@ -27,7 +27,8 @@ const invertedButtonStyles = css`
 const googleSingInStyles = css`
   background-color: #4285F4;
   color: white;
-
+  border: none;
+  
   &:hover {
     background-color: #357ae8;
     border: none;
